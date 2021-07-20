@@ -37,3 +37,50 @@ print(d1.values())
 print("cake" in d1)
 print("Mango" in d1.values())
 
+"""
+Dictionaries 2
+
+Using the dictionary from item 1: Make a dictionary using the same keys but with the number 
+of ‘t’s in each value as the value (consider upper and lower case?).
+
+"""
+
+d2 = dict([(k, v.lower().count('t')) for k, v in d1.items()])
+
+"""
+Sets 
+
+Create sets s2, s3 and s4 that contain numbers from zero through twenty, divisible by 2, 3 and 4 (figure out a way to compute those – don’t just type them in).
+
+Display the sets.
+
+Display if s3 is a subset of s2 (False)
+
+and if s4 is a subset of s2 (True).
+"""
+
+s2 = {i for i in range(21) if i % 2 == 0}
+s3 = {i for i in range(21) if i % 3 == 0}
+s4 = {i for i in range(21) if i % 4 == 0}
+
+print("s1: {}\ns2: {}\ns3: {}".format(s2, s3, s4))
+print(s2 < s3)
+print(s4 < s2)
+
+"""
+Sets 2
+
+Create a set with the letters in ‘Python’ and add ‘i’ to the set.
+
+Create a frozenset with the letters in ‘marathon’.
+
+Display the union and intersection of the two sets.
+"""
+
+s5 = {i for i in 'Python'}
+s5.add('i')
+
+s6 = frozenset('marathon')
+print(s5 | s6)
+print('Union of s5 and s6: {}'.format(s5 | s6))
+print('Intersection of s5 and s6: {}'.format(s5 & s6))
